@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Clean Mode Options</title>
+  <style>
+    :root {
+      --bg: #1F1F1F;
+      --panel: #2A2A2A;
+      --border: #3A3A3A;
+      --text: #EDEDED;
+      --muted: #A9A9A9;
+      --badge: #3A3A3A;
+      --btn-bg: #2E2E2E;
+      --btn-border: #4A4A4A;
+      --btn-text: #F5F5F5;
+      --btn-primary-bg: #F94B6C;
+      --btn-primary-text: #FFFFFF;
+      --focus: #F94B6C;
+    }
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+      /* Fullscreen flex layout */
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px;
+      min-height: 100vh;
+    }
+
+    h1 { font-size: 18px; margin: 0; }
+
+    /* Top controls bar */
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    .muted { color: var(--muted); }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    button {
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--btn-border);
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      cursor: pointer;
+    }
+    button.primary {
+      background: var(--btn-primary-bg);
+      border-color: var(--btn-primary-bg);
+      color: var(--btn-primary-text);
+    }
+    button:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+    input[type="checkbox"] {
+      width: 16px; height: 16px; accent-color: var(--btn-primary-bg);
+    }
+    .hint { font-size: 12px; color: var(--muted); }
+
+    /* Main content area fills the rest */
+    .content {
+      /* take all remaining height */
+      flex: 1;
+      min-height: 0; /* important so the child can scroll */
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* The list now expands and scrolls as needed */
+    .list {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg);
+
+      /* fill remaining height and scroll */
+      flex: 1;
+      min-height: 0; /* allow overflow to work inside flex */
+      overflow: auto;
+    }
+
+    .ext {
+      display: grid;
+      grid-template-columns: 24px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ext:last-child { border-bottom: none; }
+
+    .name { font-weight: 600; color: var(--text); }
+    .id { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; color: var(--muted); }
+    .badge { font-size: 11px; padding: 2px 6px; border-radius: 999px; background: var(--badge); color: var(--text); }
+  </style>
+</head>
+<body>
+  <h1>Clean Mode Options</h1>
+
+  <div class="panel">
+    <div class="muted">Choose which extensions are toggled by Clean Mode</div>
+    <div class="controls">
+      <button id="selectAll">Select all</button>
+      <button id="selectNone">Select none</button>
+      <button id="save" class="primary">Save</button>
+      <span id="status" class="hint"></span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="list" class="list" aria-live="polite"></div>
+    <div class="hint">Your controller (this extension) is never disabled.</div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

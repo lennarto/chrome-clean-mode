@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Clean Mode Toggle",
+  "version": "1.2.0",
+  "description": "One click: disable / re-enable selected extensions.",
+  "permissions": ["management", "storage"],
+  "action": { "default_title": "Toggle Clean Mode" },
+  "background": { "service_worker": "background.js" },
+  "options_page": "options.html",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
+}
