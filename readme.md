@@ -16,13 +16,33 @@ Select which ones should be included, and keep the rest always on.</h5>
 
 ## 🚀 Installation via Chrome Web Store
 
-<a href="https://chromewebstore.google.com/detail/outlook-web-copy-link/apfgdjfahgmocjbiiackcfhilgpcjgoe?hl=de&authuser=1">
-  <img src="icons/chrome_web_store.png" alt="Install from Chrome Web Store" width="260"/>
+<a href="https://chromewebstore.google.com/detail/clean-mode-toggle/cfffoplaiopgipdajmkdagiccnglehgm">
+  <img src="images/chrome_web_store.png" alt="Install from Chrome Web Store" width="210"/>
 </a>
 
+- Option 1: Install directly from the [Chrome Web Store](https://chromewebstore.google.com/detail/clean-mode-toggle/cfffoplaiopgipdajmkdagiccnglehgm)
+- Option 2: Download this repository and load it as an unpacked extension in Chrome.
+
+## 🔥 Usage 
+
+Clicking on the extension icon is hiding / showing all pinned chrome extensions. In the Options, you can permanently exclude specific extensions.
 
 > [!IMPORTANT]
 > ⚠️ **This addon is not hiding, it's actually (de)activating the extensions**  
 > 👉 This is because Google Chrome doesn't have an API to hide/show extensions
 
 
+## 💙 Support 
+
+#### 🐞  Found a bug? Missing a specific feature?
+Feel free to file a new <a href="https://github.com/lennarto/chrome-clean-mode/issues" target="_blank">Issue</a>.
+
+#### 🤝 Contact me
+I love building digital products, working in it-strategy, or applying ai in real-world use cases. On top of that, i create private it expert reports (🇩🇪 IT-Gutachten) for legal proceedings in germany, especially in criminal cases.
+👉 [My website](https://lennie.de) 👈
+
+
+#### 🍻 Buy me a beer 
+
+If you’ve found something useful, feel free to fuel my next project with a Beer! 🍻 I do have a couple of cool ideas in my backlog 🚀
+👉 [My Paypal](https://www.paypal.com/paypalme/ltoertzen) | [Ko-Fi](https://ko-fi.com/lennie) 👈
